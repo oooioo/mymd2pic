@@ -365,22 +365,48 @@ const state = {
 
 ### 6.2 详细部署步骤
 
+#### 6.2.0 GitHub准备工作状态 ✅ 已完成
+- **本地Git仓库**：✅ 已初始化
+- **SSH密钥**：✅ 已配置（id_ed25519）
+- **GitHub用户名**：oooioo
+- **初始提交**：✅ 已完成（包含PDR.md和.gitignore）
+- **远程仓库**：✅ 已创建并连接
+- **代码推送**：✅ 已推送到main分支
+- **仓库地址**：https://github.com/oooioo/mymd2pic
+- **状态**：✅ GitHub准备工作全部完成，可以开始开发
+
 #### 6.2.1 前置准备
 1. **安装Node.js**
    - 下载并安装Node.js（版本 >= 16.0.0）
    - 验证安装：`node --version` 和 `npm --version`
 
-2. **创建GitHub仓库**
-   - 登录GitHub，创建新仓库
+2. **创建GitHub仓库**（待完成）
+   - 登录GitHub：https://github.com
+   - 点击右上角 "+" → "New repository"
    - 仓库名称：mymd2pic
    - 设置为Public（公开仓库）
-   - 初始化README（可选）
+   - **重要**：不要勾选"Initialize this repository with a README"（因为本地已有代码）
+   - 点击"Create repository"
+   - 创建后会显示仓库地址：https://github.com/oooioo/mymd2pic
 
-#### 6.2.2 本地项目初始化
+3. **连接本地仓库到GitHub**（创建仓库后执行）
+   ```bash
+   # 添加远程仓库
+   git remote add origin git@github.com:oooioo/mymd2pic.git
+
+   # 推送到GitHub
+   git branch -M main
+   git push -u origin main
+   ```
+
+#### 6.2.2 本地项目初始化（已完成）
 ```bash
-# 1. 克隆仓库到本地
-git clone https://github.com/username/mymd2pic.git
-cd mymd2pic
+# 已完成以下操作：
+# ✅ git init
+# ✅ 创建.gitignore
+# ✅ git add .
+# ✅ git commit -m "Initial commit"
+```
 
 # 2. 初始化项目（如果还没有package.json）
 npm init -y
